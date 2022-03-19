@@ -1,0 +1,144 @@
+.memoryGame {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .mainSquare {
+    background-color: none;
+    min-height: 50vh;
+    min-width: 50vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 10px;
+    .squareBtn {
+      height: 100%;
+      color: #1d2d50;
+    }
+    .squareBtnActive {
+      background: #1e5f74;
+    }
+  }
+  .startButton {
+    position: absolute;
+  }
+}
+.memoryGameDark {
+  background-color: #1d2d50;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .mainSquare {
+    background-color: none;
+    min-height: 50vh;
+    min-width: 50vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 10px;
+    .squareBtn {
+      background-color: #133b5c;
+      border-color: #1e5f74;
+      height: 100%;
+      color: rgb(190, 190, 190);
+    }
+    .squareBtnActive {
+      background: #1e5f74;
+    }
+  }
+  .startButton {
+    position: absolute;
+    background-color: #1e5f74;
+    border-color: #133b5c;
+    color: rgb(190, 190, 190);
+  }
+}
+.upperBar {
+  min-width: 100vw;
+  height: 10%;
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h1 {
+      color: #c9d6ff;
+      padding: 0 0.5em;
+      margin: 0;
+      user-select: none;
+    }
+  }
+  .switch {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 1em;
+    color: #fff;
+  }
+}
+.upperBarDark {
+  min-width: 100vw;
+  height: 10%;
+  background: #221d50;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    button {
+      background-color: #221d50;
+      color: #c9d6ff;
+    }
+    h1 {
+      color: #c9d6ff;
+      padding: 0 0.5em;
+      margin: 0;
+      user-select: none;
+    }
+  }
+
+  .switch {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 1em;
+    color: #c9d6ff;
+    button {
+      background: #133b5c;
+      border-color: #133b5c;
+      div::before {
+        background: #221d50;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .memoryGame {
+    .mainSquare {
+      min-height: 60vh;
+      min-width: 80vw;
+    }
+  }
+  .memoryGameDark {
+    .mainSquare {
+      min-height: 60vh;
+      min-width: 80vw;
+    }
+  }
+}
